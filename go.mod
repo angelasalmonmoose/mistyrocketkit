@@ -1,3 +1,3 @@
-module cron_manager_b60e06
+module cron_manager_dcc49a
 
 go 1.23
